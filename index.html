@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onara Fly</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- タイトル画面 -->
+        <div id="title-screen" class="screen">
+            <h1>Onara Fly</h1>
+            <p class="subtitle">おならで空を飛べ!</p>
+            <div class="high-score">ハイスコア: <span id="title-high-score">0</span></div>
+            <button id="start-button">ゲームスタート</button>
+            <p class="instruction">クリック or タップで上昇</p>
+        </div>
+
+        <!-- ゲーム画面 -->
+        <div id="game-screen" class="screen hidden">
+            <canvas id="game-canvas"></canvas>
+            <div id="hud">
+                <div class="score">スコア: <span id="current-score">0</span></div>
+                <div class="high-score">ハイスコア: <span id="game-high-score">0</span></div>
+            </div>
+        </div>
+
+        <!-- ゲームオーバー画面 -->
+        <div id="gameover-screen" class="screen hidden">
+            <h2>ゲームオーバー</h2>
+            <div class="final-score">スコア: <span id="final-score">0</span></div>
+            <div id="new-record" class="hidden">NEW RECORD!</div>
+            <button id="retry-button">もう一度</button>
+            <button id="title-button">タイトルへ</button>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/obstacle.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
